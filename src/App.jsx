@@ -15,7 +15,9 @@ function App() {
         }}
       >
         <Link to="/invoices">Facturas</Link> | {" "}
-        <Link to="/expenses">Gastos</Link>
+        <Link to="/expenses">Gastos</Link> | {" "}
+        <Link to="/protected">Protected</Link> | {" "}
+        <Link to="/signin">Login</Link> | {" "}
       </nav >
       <Outlet />
     </div>

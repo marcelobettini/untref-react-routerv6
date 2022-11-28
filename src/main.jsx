@@ -8,6 +8,9 @@ import Expenses from './routes/Expenses';
 import Invoices from './routes/Invoices';
 import Invoice from './routes/Invoice';
 import Home from './routes/Home';
+import ProtectedRoute from './auth/ProtectedRoute';
+import Protected from './routes/Protected';
+import SignIn from './routes/SignIn';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
@@ -23,6 +26,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path=':invoiceId' element={<Invoice />} />
           </Route>
           <Route path="expenses" element={<Expenses />} />
+          <Route element={<ProtectedRoute />}>
+            <Route path='protected' element={<Protected />} />
+          </Route>
+          <Route path='signin' element={<SignIn />} />
           <Route path='*' element={<ErrorPage />} />
         </Route>
 
